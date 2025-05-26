@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router";
+import App from "../App";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Gemini Clone</div>,
+    element: <App></App>,
   },
 ]);
 
