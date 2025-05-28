@@ -1,0 +1,19 @@
+.leftSide {
+  padding: 10px 20px;
+}
+.leftSide img {
+  width: 20px;
+}
+
+.leftSide .chat {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 7px 20px;
+}
+.leftSide .bottom-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
