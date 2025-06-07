@@ -15,19 +15,18 @@ const LeftSide = () => {
           src={assets.menu_icon}
           alt="menu"
         />
-        {toggle && (
-          <div className="chat hover:cursor-pointer inline-flex items-center bg-gray-200 rounded-full gap-2 mx-auto">
-            <img src={assets.plus_icon} alt="" />
-            <p>New Chat</p>
-          </div>
-        )}
+
+        <div className="chat hover:cursor-pointer inline-flex items-center bg-gray-200 rounded-full gap-2">
+          <img src={assets.plus_icon} alt="" />
+          {toggle && <p>New Chat</p>}
+        </div>
       </div>
 
       {/* middle */}
       {toggle && (
         <div className="middle">
           <p>Recent</p>
-          <div className="recent-entry inline-flex items-center">
+          <div className="recent-entry inline-flex items-center hover:bg-gray-200 w-full !p-2 rounded-full">
             <img src={assets.message_icon} alt="Message" />
             <p>What is react ...</p>
           </div>
@@ -35,22 +34,21 @@ const LeftSide = () => {
       )}
 
       {/* bottom */}
-      {toggle && (
-        <div className="bottom inline-flex items-center justify-between gap-5">
-          <div className="bottom-item">
-            <img src={assets.question_icon} alt="" />
-            <p>Help</p>
-          </div>
-          <div className="bottom-item">
-            <img src={assets.history_icon} alt="" />
-            <p>Activity</p>
-          </div>
-          <div className="bottom-item">
-            <img src={assets.setting_icon} alt="" />
-            <p>Settings</p>
-          </div>
+
+      <div className="bottom inline-flex flex-col justify-start gap-5">
+        <div className="bottom-item">
+          <img src={assets.question_icon} alt="" />
+          {toggle && <p>Help</p>}
         </div>
-      )}
+        <div className="bottom-item">
+          <img src={assets.history_icon} alt="" />
+          {toggle && <p>Activity</p>}
+        </div>
+        <div className="bottom-item">
+          <img src={assets.setting_icon} alt="" />
+          {toggle && <p>Settings</p>}
+        </div>
+      </div>
     </div>
   );
 };
